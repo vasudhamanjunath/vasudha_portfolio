@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg, #2a9d8f 50%, #050000 50%);
+        }
+        #pdf-container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .pdf-page {
+            margin: 0;
+            padding: 0;
+        }
+        .resume-image {
+            width: 50%;
+            height: auto;
+        }
+        #download-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="download-button">
+        <a href="Resume.pdf" download class="download-button">Download PDF</a>
+    </div>
+
+    <div>
+        <br>
+    </div>
+
+    <div id="pdf-container">
+        <!-- Insert your resume image here -->
+        <div class="pdf-page">
+            <img class="resume-image" src="Resume_page-0001.jpg" alt="Resume">
+            <img class="resume-image" src="Resume_page-0002.jpg" alt="Resume">
+        </div>
+    </div>
+
+    <!-- Download button -->
+    <div id="download-button">
+        <a href="Resume.pdf" download class="download-button">Download PDF</a>
+    </div>
+
+    <div>
+        <br>
+    </div>
+</body>
+</html>
