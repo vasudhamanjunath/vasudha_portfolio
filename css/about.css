@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+:root {
+    --bg-color: #1D1D1D;
+    --nav-color: #000;
+    --sec-color: #2a9d8f;
+    --text-color: #fff;
+    --text-color2: #b3b3b3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color2);
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 0 15rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+
+.line {
+    width: 60%;
+}
+/*
+==========
+nav
+==========
+*/
+
+nav {
+    background: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height: 3.3rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+    letter-spacing: 4px;
+}
+
+.nav-items a,
+.logo-sml a {
+    transition: all 250ms ease-in-out;
+}
+
+.nav-items a:hover,
+.logo-sml a:hover {
+    color: var(--sec-color);
+}
+
+.logo-sml {
+    letter-spacing: 20px;
+    margin: auto 0;
+    font-size: 2rem;
+}
+
+.logo-sml img{
+    width: 60%;
+
+}
+
+span {
+    color: var(--sec-color);
+}
+
+
+/*
+==========
+about
+==========
+*/
+
+.about {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    height: auto;
+    background: var(--sec-color);
+    color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+
+
+}
+
+.about span {
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.about h2 {
+  color: #4d4d4d;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+.about p{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.about-description .teffects{
+  font-size: 2rem;
+  font-weight: 590;
+    width: 100%;
+
+}
+
+
+
+/*
+==========
+MEDIA QUERIES
+==========
+*/
+
+@media (max-width: 1200px) {
+    .logo-sml {
+        display: none;
+    }
+
+    .nav-items {
+        width: 100%;
+    }
+  }
+
+
+@media (max-width: 800px) {
+    .nav-items {
+        flex-direction: column;
+    }
+
+    * h2 {
+        font-size: 2rem;
+    }
+    nav {
+        height: auto;
+        position: relative;
+    }
+
+    .nav-items li {
+        padding: .3rem;
+    }
+
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+
+
+
+
+    progress, progress[role] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      background-size: auto;
+      height: 100px;
+      width: 100%;
+    }
+
+    .skill-list {
+      list-style: none;
+      margin: 0;
+      padding: 1em;
+    }
+
+    .skill {
+      margin-bottom: 1em;
+      position: relative;
+    }
+    .skill h3 {
+      color: #fff;
+      left: 1em;
+      line-height: 1;
+      position: absolute;
+      top: 1em;
+    }
+    .skill ::-webkit-progress-value {
+      -webkit-animation: bar-fill 2s;
+      width: 0px;
+    }
+
+    .skill-1::-webkit-progress-value {
+      background: #ff9e2c;
+    }
+
+    .skill-1::-moz-progress-bar {
+      background: #ff9e2c;
+    }
+
+    .skill-2::-webkit-progress-value {
+      background: #4ecdc4;
+    }
+
+    .skill-2::-moz-progress-bar {
+      background: #4ecdc4;
+    }
+
+    .skill-3::-webkit-progress-value {
+      background: #ff6b6b;
+    }
+
+    .skill-3::-moz-progress-bar {
+      background: #ff6b6b;
+    }
+
+    @-webkit-keyframes bar-fill {
+      0% {
+        width: 0;
+      }
+    }
+    @keyframes bar-fill {
+      0% {
+        width: 0;
+      }
+    }
+  }
